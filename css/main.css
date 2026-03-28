@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+:root {
+    --primary: #0A192F;      /* deep navy (background) */
+    --secondary: #112240;    /* slightly lighter */
+    --accent: #1F6FEB;       /* main blue */
+    --accent-light: #4DA3FF; /* hover / highlights */
+    --text: #E6F1FF;         /* soft white text */
+    --text-muted: #8892B0;   /* secondary text */
+}
+.container {
+margin-left: auto;     /* centers it */
+margin-right: auto;    /* centers it */
+padding-left: 15px;    /* side space */
+padding-right: 15px;	
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    height: 100vh;
+    padding: 36px 0;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width:970px
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+body {
+    background-color: #0A192F;
+    font-family: "Inter", sans-serif;
+}
+header {
+    background: var(--accent);
+    padding: 4px;
+    position: relative;
+    position: sticky;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .portfolio {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+header .nav-bar {
+    display: flex;
+    
+}
+
+header ul {
+    display: flex;
+}
+header ul li {
+    margin-left: 20px;
+    padding: 20px;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    color: white;
+    padding: 20px 4px;
+    transition: all 0.5s ease;
+}
+header ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px; /* underline at bottom */
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: width 0.5s ease;
+}
+header ul li a:hover {
+    color: #0A192F;
+}
+header ul li a:hover::after {
+    width: 100%;
+}
+/* start about */
+main {
+    margin-top: 36px;
+    transition: all 0.5s ease;
+}
+
+main .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .about {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition:  0.5s ease;
+}
+main .about .left {
+    flex: 1;
+    flex-basis: 200px;
+    flex: 1;
+}
+
+
+main .about .left h3{
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+main .about .left h2{
+    font-size: 2rem;
+    color: aqua;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+main .about .left p {
+    margin-bottom: 40px;
+    width: 50%;
+    font-size: 15px;
+    font-weight: 500;
+    color: #CFE8FF;
+}
+main .about .left .Social-mediaicons {
+    margin-bottom: 20px;
+}
+main .about .left a {
+    margin-left: 12px;
+}
+main .about .left a:first-child {
+    margin: 0;
+}
+
+main .about .left i{
+    font-size: 24px;
+    border-radius: 25%;
+    background-color: var(--accent);
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+main .about .left i:hover{
+    background-color: var(--accent-light);
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 0 15px aquamarine,
+                0 0 30px aquamarine;
+}
+
+main .about .left i:first-child {
+    margin: 0;
+}
+
+main .about .left .email-btn{
+    position: relative;
+    background-color: var(--accent);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    font-size:1rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease;
+}
+main .about .left .email-btn:hover{
+    background-color: var(--accent-light);
+    position: relative;
+    transform: translateX(20px);
+    box-shadow: 0 0 15px aquamarine,
+                0 0 30px aquamarine;
+    
+}
+
+
+main .about .right img{
+    width: 400px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+    background:var(--accent) ;
+    border: none;
+    box-shadow: 0 0 20px var(--accent);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*end the about section*/
+
+
+/*start mywork section*/
+
+.mywork {
+    background: var(--secondary);
+}
+.mywork h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    color: #fff;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 500;
+}
+.mywork .container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.project-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 340px;
+    height: 300px;
+    background-color: #CFE8FF;
+    border-radius: 24px;
+    padding: 10px;
+    gap: 20px;
+}
+.project-box i {
+    border: 2px solid #112240;
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-box img {
+    width: 100%;
+    height: 160px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+
+/*end if project section*/
+
+.Services h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    color: #fff;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 500;
+
+}
+.Services .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Services .services-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.Services .service-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 340px;
+    height: 300px;
+    background-color: #CFE8FF;
+    border-radius: 24px;
+    padding: 10px;
+    gap: 20px;
+}
+.Services .service-box img{
+    width: 100%;
+    height: 160px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
