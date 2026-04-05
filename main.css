@@ -248,12 +248,17 @@ main .about .right img{
 .mywork h2 {
     display: flex;
     justify-content: center;
-    margin-top: 60px ;
+    margin-top: 20px ;
     margin-bottom: 60px;
     color: #fff;
     font-size: 4rem;
     font-style: italic;
     font-weight: 500;
+}
+
+.mywork span {
+    color: var(--accent-light);
+    margin-right: 12px;
 }
 
 .mywork .container {
@@ -310,67 +315,113 @@ main .about .right img{
 
 
 /*end if project section*/
-.Services {
-    display: flex;
-    flex-direction: column;
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-weight: 500;
+  height: auto;
 }
-.Services h2{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
+.services h3 {
+    margin-top: 20px ;
     margin-bottom: 60px;
     color: #fff;
     font-size: 4rem;
-    font-style: italic;
-    font-weight: 500;
-
 }
-.Services .container {
-    flex: 1;
-    gap: 2rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+.services span {
+    color: var(--accent-light);
 }
 
-.Services .services-content {
+.services .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-}
-
-.Services .service-box {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    max-width: 340px;
-    height: 300px;
-    background-color: #CFE8FF;
-    border-radius: 24px;
-    padding: 10px;
+    gap: 60px;
+}
+.service-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+
+.service-box img {
+  width: 50%;
+  height: 300px;
+  border-radius: 16px;
+  border: 3px solid var(--accent-light);
+  object-fit: cover;
+}
+
+.service-box .text {
+  width: 45%;
+  color: var(--accent-light);
+}
+
+.service-box h3 {
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* Reverse layout */
+ .reverse-box {
+    display: flex;
+    justify-content: flex-end;
+ }
+/* start skills section*/
+.skills {
+    padding: 80px 0;
+    background-color: var(--secondary);
+    color: white;
+    min-height: auto;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.skills h2 span {
+    color: #64FFDA;
+}
+
+.skills-box {
+    max-width: 700px;
+    margin: 0 100px;
+    flex-direction: column;
     gap: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    
+    
 }
 
-.Services .service-box:hover {
-    transform: scale(1.05);
+.skill h3 {
+    margin-bottom: 8px;
+    font-weight: 500;
 }
-.Services .service-box img{
+
+.progress {
     width: 100%;
-    height: 160px;
-    border-radius: 24px;
-    object-fit: cover;
+    height: 10px;
+    background-color: #112240;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #64FFDA, #00BFFF);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
 
 /* start contact*/
 /* CONTACT SECTION */
 .contact {
-    background: var(--secondary);
+    background: var(--primary);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -378,10 +429,14 @@ main .about .right img{
 
 .contact h2 {
     text-align: center;
-    margin: 40px 0;
+    margin: 10px 0;
     color: var(--text);
     font-size: 3rem;
 }
+.contact span {
+    color: var(--accent-light);
+}
+
 
 .contact .container {
     flex: 1;
@@ -470,8 +525,8 @@ main .about .right img{
 /* end contact*/
 /*start footer*/
 .footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    background-color: var(--secondary);
+    padding: 20px;
 }
 
 .footer-content {
@@ -535,6 +590,7 @@ main .about .right img{
     header .container i {
         display: none;
     }
+    
 }
 @media (min-width: 1200px) {
     header .container i {
@@ -564,6 +620,14 @@ main .about .right img{
 
    header {
     font-size: 14px;
+   }
+
+   .services {
+    margin: 36px 0;
+    padding: 0;
+   }
+   .mywork  {
+    padding: 20px 0;
    }
    
 }
@@ -626,12 +690,24 @@ main .about .right img{
      .mywork .container .project-content .project-box {
         font-size: 14px;
     }
+     .service-box .text {
+        font-size: 14px;
+    }
 }
 @media (max-width: 776px) {
     .mywork .container .project-content { 
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
     .mywork .container .project-content .project-box {
+        font-size: 14px;
+    }
+
+    .service-box img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .service-box .text {
         font-size: 14px;
     }
 }

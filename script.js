@@ -35,3 +35,31 @@ window.onscroll = () => {
         };
     });
 };
+
+
+
+
+// Initialize EmailJS
+  (function () {
+    emailjs.init("ln1072CnsirHuMUYC"); // 🔁 replace this
+  })();
+
+  // Form submit
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_portfolio",   // 🔁 replace this
+      "template_cxk195m",  // 🔁 replace this
+      this
+    )
+    .then(function () {
+      alert("Message sent successfully ✅");
+    })
+    .catch(function (error) {
+      alert("Failed to send ❌");
+      console.log(error);
+    });
+
+    this.reset(); // clear form
+  });

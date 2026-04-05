@@ -18,7 +18,8 @@
         <ul>
             <li><a href="#about" class="active">About</a></li>
             <li><a href="#mywork">My Work</a></li>
-            <li><a href="#Services">Services</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -50,7 +51,7 @@
     <!--end of about section-->
     <!--start of my work section-->
         <section class="mywork" id="mywork">
-            <h2>Latest Project</h2>
+            <h2><span>Latest</span>Project</h2>
                 <div class="container">
                     <div class="project-content">
                     <div class="project-box">
@@ -78,31 +79,97 @@
         </section>
         <!--end of my work section-->
         <!--start of skills section-->
-        <section class="Services" id="Services">
-            <h2>Services</h2>
-            <div class="container">
-                <div class="services-content">
-                    <div class="service-box">
-                        <img src="pexels-bibekghosh-14553720.jpg" alt="#";>
-                        <h3>web development</h3>
-                        <p>I create interactive websites with a focus on usability and clean UI.</p>
-                    </div>
-                    <div class="service-box">
-                        <img src="pexels-gabby-k-6289025.jpg" alt="">
-                        <h3>Responsive Design</h3>
-                        <a href="#">I ensure websites look great on all screen sizes and devices.</a>
-                    </div>
-                    <div class="service-box">
-                        <img src="pexels-zayed-hossain-52728970-36747234.jpg" alt="">
-                        <h3>UI Implementation</h3>
-                        <a href="#">I convert design files into fully functional and responsive websites.</a>
-                    </div>
+        <section class="services" id="services">
+                <h3><span>my </span>Services</h3>
+                <div class="container">
+            <div class="service-box">
+                <img src="res.png" alt="">
+                <div class="text">
+                <h3>Web Design</h3>
+                <p>Clean and modern responsive designs for your business.</p>
                 </div>
-        </div>
+            </div>
+
+            <div class="service-box reverse-box">
+                <div class="text">
+                <h3>Landing Pages</h3>
+                <p>High-converting landing pages for your product or service.</p>
+                </div>
+                <img src="landingpage.png" alt="">
+            </div>
+
+            <div class="service-box">
+                <img src="pexels-bibekghosh-14553720.jpg" alt="">
+                <div class="text">
+                <h3>Frontend Development</h3>
+                <p>Responsive and interactive websites using modern tools.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+<!--end services section-->
+<!--start skills section-->
+
+        <section class="skills" id="skills">
+                    <div class="container">
+                    <h2>My <span>Skills</span></h2>
+                <div class="skills-box">
+                    <div class="skill">
+                        <div class="info">
+                            <h3>HTML</h3>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <span style="width: 90%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h3>CSS</h3>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <span style="width: 85%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h3>JavaScript</h3>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <span style="width: 75%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h3>Responsive Design</h3>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="info">
+                            <h3>Git & GitHub</h3>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress">
+                            <span style="width: 70%;"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
         <!--contact section-->
         <section class="contact" id="contact">
-            <h2>Contact Me</h2>
+            <h2>Contact <span>Me</span></h2>
 
             <div class="container">
                 <div class="contact-content">
@@ -124,12 +191,15 @@
                 </div>
 
                 <!-- RIGHT FORM -->
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <form  class="contact-form" id="contact-form">
+                    <input type="text" name="from_name" placeholder="Your Name" required>
+
+                    <input type="email" name="from_email" placeholder="Your Email" required>
+
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+
                     <button type="submit">Send Message</button>
-                </form>
+                    </form>
 
                 </div>
             </div>
@@ -153,6 +223,7 @@
             </div>
         </footer>
    </main>
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
