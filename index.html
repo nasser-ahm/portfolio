@@ -13,12 +13,13 @@
    <header>
     <div class="container">
     <a href="#" class="portfolio">Portfolio</a>
+    <i class="fa-solid fa-bars"></i>
     <div class="nav-bar">
         <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about" class="active">About</a></li>
             <li><a href="#mywork">My Work</a></li>
             <li><a href="#Services">Services</a></li>
-            <li><a href="#mywork">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
     </div>
@@ -48,25 +49,32 @@
     </div>
     <!--end of about section-->
     <!--start of my work section-->
-     <section class="mywork" id="mywork">
-        <h2>Latest Project</h2>
-            <div class="container">
-                <div class="project-box">
-                    <img src="weatherapp.jpg" alt="">
-                    <h3>weather app</h3>
-                    <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+        <section class="mywork" id="mywork">
+            <h2>Latest Project</h2>
+                <div class="container">
+                    <div class="project-content">
+                    <div class="project-box">
+                        <img src="weatherapp.jpg" alt="">
+                        <h3>weather app</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                    </div>
+                    <div class="project-box">
+                        <img src="Screenshot 2026-03-28 124107.png" alt="">
+                        <h3>e-commerce website</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                    </div>
+                    <div class="project-box">
+                        <img src="dash.png" alt="">
+                        <h3>admin dashboard</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                    </div>
+                    <div class="project-box">
+                        <img src="weatherapp.jpg" alt="">
+                        <h3>weather app</h3>
+                        <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
+                    </div>
+                    </div>
                 </div>
-                <div class="project-box">
-                    <img src="Screenshot 2026-03-28 124107.png" alt="">
-                    <h3>e-commerce website</h3>
-                    <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
-                </div>
-                <div class="project-box">
-                    <img src="dash.png" alt="">
-                    <h3>admin dashboard</h3>
-                    <a href="#"><i class="fa-solid fa-arrow-pointer"></i></a>
-                </div>
-            </div>
         </section>
         <!--end of my work section-->
         <!--start of skills section-->
@@ -92,10 +100,59 @@
                 </div>
         </div>
         </section>
+        <!--contact section-->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+
+            <div class="container">
+                <div class="contact-content">
+
+                <!-- LEFT INFO -->
+                <div class="contact-info">
+                    <h3>Let’s work together 🚀</h3>
+                    <p>I’m available for freelance or remote work. Feel free to contact me.</p>
+
+                    <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>nasser.ahmedg20@gmail.com</span>
+                    </div>
+
+                    <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Algeria</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                </div>
+            </div>
+        </section>
+        <!--end contact section-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                <h3 class="footer-logo">Portfolio</h3>
+                <p>Frontend Developer | Building modern and responsive websites.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p class="copyright">
+                    © 2026 All rights reserved.
+                </p>
+                </div>
+
+            </div>
+        </footer>
    </main>
-    <main>
-        
-    </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
