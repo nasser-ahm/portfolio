@@ -248,7 +248,7 @@ main .about .right img{
 .mywork h2 {
     display: flex;
     justify-content: center;
-    margin-top: 20px ;
+    margin-top: 60px ;
     margin-bottom: 60px;
     color: #fff;
     font-size: 4rem;
@@ -262,16 +262,16 @@ main .about .right img{
 }
 
 .mywork .container {
-    flex: 1; /* THIS is the magic */
     display: flex;
-    align-items: center;     /* vertical center */
-    justify-content: center; /* horizontal center */
+    align-items: center;     
+    justify-content: center; 
+     max-width: 900px;
+    margin: auto;
 }
 .mywork .container .project-content{
     display: grid;
-    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
@@ -279,18 +279,46 @@ main .about .right img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 340px;
+    height: 280px;
     background-color: #CFE8FF;
     border-radius: 24px;
     padding: 10px;
-    padding-bottom: 20px;
     gap: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
-    flex: 1;
+    position: relative;
+    overflow: hidden;
 }
 .project-box:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.project-box:hover .descr {
+     transform: translateY(0);
+}
+
+
+.project-box .descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #89c2ff, #cfe8ff);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-box .descr h3 {
+    font-size: 3rem;
+    font-family: italic;
 }
 .project-box i {
     border: 2px solid #112240;
@@ -308,7 +336,7 @@ main .about .right img{
 }
 .project-box img {
     width: 100%;
-    height: 160px;
+    height: 100%;
     border-radius: 15px;
     object-fit: cover;
 }
@@ -580,6 +608,11 @@ main .about .right img{
 
 
 /* start responsive*/
+@media (max-width: 1470px) {
+    .mywork .container .project-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 @media (max-width: 1200px) {
@@ -590,9 +623,10 @@ main .about .right img{
     header .container i {
         display: none;
     }
-    
+     
+
 }
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
     header .container i {
     display: none;}
 }
